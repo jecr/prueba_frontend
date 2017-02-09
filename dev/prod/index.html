@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prueba Front End</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="over-wrppr">
+	<div class="over-cont">
+		<div class="over-close">
+			<div>close</div>
+		</div>
+		<div class="over-data cf">
+			<div class="cf">
+				<h2>User information</h2>
+				<div class="data-personal" data-username="">
+					<h3>User</h3>
+					<span class="data-label">Name</span>
+					<span class="personal-name info"></span>
+					<span class="data-label">Username</span>
+					<span class="personal-username info"></span>
+					<span class="data-label">email:</span>
+					<span class="personal-email info"></span>
+					<span class="data-label">Phone</span>
+					<span class="personal-phone info"></span>
+					<span class="data-label">Website</span>
+					<span class="personal-website info"></span>
+				</div>
+				<div class="data-company">
+					<h3>Company</h3>
+					<span class="data-label">name</span>
+					<span class="company-name info"></span>
+					<span class="data-label">Catch Phrase</span>
+					<span class="company-catchphrase info"></span>
+					<span class="data-label">BS:</span>
+					<span class="company-bs info"></span>
+				</div>
+				<div class="data-address">
+					<h3>Address</h3>
+					<span class="data-label">Country:</span>
+					<span class="address-country info"></span>
+					<span class="data-label">State</span>
+					<span class="address-state info"></span>
+					<span class="data-label">City:</span>
+					<span class="address-city info"></span>
+					<span class="data-label">Street</span>
+					<span class="address-street info"></span>
+					<span class="data-label">Zip Code</span>
+					<span class="address-zipcode info"></span>
+					<span class="data-label">Coordinates</span>
+					<div class="address-geo info">
+						<span class="geo-lat info"></span><br>
+						<span class="geo-long info"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="cf">
+				<h3>User logs</h3>
+				<div class="data-posts">
+					<a href="#" data-type="posts">Display posts</a>
+					<div>
+						
+					</div>
+				</div>
+				<div class="data-history">
+					<a href="#" data-type="account-history">Display history</a>
+					<div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="main-container">
+	<h1>User listing</h1>
+	<!-- <select id="entries">
+		<option selected value="10">10</option>
+		<option value="25">25</option>
+		<option value="50">50</option>
+		<option value="100">100</option>
+		<option value="500">500</option>
+	</select> -->
+	<div class="inner-container"></div>
+	<nav class="cf">
+		<div class="navig"><a href="#" data-order="prev">Previous</a></div>
+		<div id="pagination"></div>
+		<div class="navig"><a href="#" data-order="next">Next</a></div>
+	</nav>
+</section>
+	
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/actions.min.js"></script>
+</body>
+</html>

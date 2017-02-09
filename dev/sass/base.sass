@@ -1,0 +1,18 @@
+// Clearfix
+.cf:before,
+.cf:after
+	content: " "
+	display: table
+.cf:after
+	clear: both
+.cf
+	*zoom: 1
+
+// Breakpoints
+@import "breakpoint_a"
+
+@media screen and (min-width: 600px)
+	@import "breakpoint_b"
+
+@media screen and (min-width: 1000px)
+	@import "breakpoint_c"

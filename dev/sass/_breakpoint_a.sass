@@ -1,0 +1,93 @@
+// General
+body
+	margin: 0
+	font-family: sans-serif
+	min-width: 320px
+	background: lighten(#1b85b8, 53%)
+	font-size: .9em
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+// Main listing
+.main-container
+	padding: 0 15%
+	h1
+		text-align: center
+		color: #5a5255
+	nav
+		font-size: .8em
+		div
+			float: left
+			text-align: center
+			&:nth-child(odd)
+				width: 25%
+			&:nth-of-type(2)
+				width: 50%
+	li
+		text-align: center
+		padding: 3px 0
+
+.inner-container
+	padding: 0 10% 15px 15%
+
+// Overlay
+.over-wrppr
+	display: none
+	background-color: rgba(0, 0, 0, .35)
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	position: fixed
+
+.over-cont
+	background: rgb(255,255,255)
+	width: 80%
+	height: 80%
+	top: 10%
+	left: 10%
+	overflow-y: scroll
+	position: fixed
+	min-width: 320px * .8
+
+.over-close
+	background: #eee
+	& > div
+		background: #ae5a41
+		color: #fff
+		cursor: pointer
+		display: inline-block
+		text-transform: uppercase
+		padding: 5px
+		box-sizing: border-box
+		font-size: .7em
+		&:hover
+			color: #ae5a41
+			background: #fff
+
+.over-data
+	box-sizing: border-box
+	padding: 15px 10%
+
+.data-personal,
+.data-company,
+.data-address
+	float: left
+	width: 100%
+
+.data-label
+	display: block
+	font-size: .75em
+	color: #559E83
+
+.info
+	color: #333
+
+// Style for each entry of the logs
+.log-entry
+	border: 1px solid #559e83
+	box-sizing: border-box
+	padding: 5px
