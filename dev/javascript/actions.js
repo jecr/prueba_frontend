@@ -5,26 +5,31 @@ var url = "http://cors-anywhere.herokuapp.com/https://morning-tundra-64741.herok
 	displayPage,
 	totalEntries;
 
+// Consulta / generación de html del listado
 function listUsers(params){
 	var jqxhrUsers = $.ajax({
 		url: url + params,
 		success: function(data){
 			
+			// Consulta de headers devueltos para implementar paginación
 			displayPage = parseInt(jqxhrUsers.getResponseHeader('Pagination-Page')) + 1;
 			totalEntries = jqxhrUsers.getResponseHeader('Pagination-Total');
 			totalPages =  totalEntries/ jqxhrUsers.getResponseHeader('Pagination-Size');
 
 			var htmlContent = '<ul>';
 			
+			// Listado de usuarios
 			for (var i = 0; i < data.length; i++) {
 				htmlContent += '<li><a href="#" data-id="' + data.indexOf(data[i]) + '">' + data[i].name + '</a></li>';
 			}
 
 			htmlContent += '</ul>';
+			$('.inner-container').html(htmlContent); // Incorporación de contenido en el DOM
 
-			$('.inner-container').html(htmlContent);
+			// Impresión de paginación
 			$('#pagination').html( 'Page ' + displayPage + ' of ' + totalPages );
 
+			// Listener para clics a nombres de usuarios
 			$('.inner-container').on('click', 'a', function(e){
 
 				e.preventDefault();
@@ -54,6 +59,7 @@ function listUsers(params){
 	});
 } // listUsers END
 
+// Consulta / generación de html de historial de posts y transacciones
 function listPosts(theUser, listingType){
 	var jqxhrPosts = $.ajax({
 		url: url + theUser,
@@ -96,7 +102,7 @@ function listPosts(theUser, listingType){
 	});
 } // list log entries END
 
-// Listener for the log buttons
+// Listener para botones de logs
 $('.data-posts, .data-history').on('click', 'a', function(e){
 	e.preventDefault();
 	consultQuery = '/' + $('.data-personal').data('username') + '/' +  $(this).data('type');
